@@ -14,10 +14,10 @@ pipeline {
         }
     }
      post{
-        always {
+        alw{
             echo 'Pipeline completed'
         }
-        failure {
+        failu {
             echo 'Pipeline failed'
         }
     }

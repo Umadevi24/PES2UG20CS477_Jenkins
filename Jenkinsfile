@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ try.cpp'
+                sh 'g++ -o PES2UG20CS477-1 try.cpp'
                 echo "Build Successful"
             }
         }
@@ -13,13 +13,12 @@ pipeline {
             }
         }
     }
-     post{
-        alw{
+    post {
+        always {
             echo 'Pipeline completed'
         }
-        failu {
+        failure {
             echo 'Pipeline failed'
         }
     }
 }
-
